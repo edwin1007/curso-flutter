@@ -13,11 +13,20 @@ class HomeScreen extends StatelessWidget {
         title: const Text('Material App Bar'),
         backgroundColor: Colors.blue,
       ),
-      body: const Center(
-          child: Text(
-        'Hello World',
-        style: TextStyle(fontSize: 30, color: Colors.red),
-      )),
+      body: Container(
+        margin: const EdgeInsets.only(top: 20),
+        padding: const EdgeInsets.all(20),
+        width: double.infinity,
+        height: 150,
+        decoration: const BoxDecoration(color: Colors.yellow),
+        child: const Text(
+          'Mi primer texto',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 30,
+          ),
+        ),
+      ),
       backgroundColor: Colors.green[200],
       floatingActionButton: FloatingActionButton(
         onPressed: () {
