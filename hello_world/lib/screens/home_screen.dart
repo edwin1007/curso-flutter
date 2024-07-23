@@ -7,37 +7,41 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var counter = 0;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Material App Bar'),
-        backgroundColor: Colors.blue,
+        title: const Text(
+          'Feed Card',
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: const Color.fromARGB(255, 56, 56, 55),
       ),
       body: Container(
         margin: const EdgeInsets.only(top: 20),
-        padding: const EdgeInsets.all(20),
         width: double.infinity,
         height: 150,
-        decoration: const BoxDecoration(color: Colors.yellow),
-        child: const Text(
-          'Mi primer texto',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: 30,
+        decoration: const BoxDecoration(color: Color.fromARGB(255, 56, 56, 55)),
+        child: Container(
+          padding: const EdgeInsets.all(10),
+          child: const Row(
+            children: [
+              CircleAvatar(
+                child: Text('EC'),
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Text(
+                'Edwin Cuaran',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
+            ],
           ),
         ),
       ),
-      backgroundColor: Colors.green[200],
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          counter++;
-          print('el contador es: $counter');
-          if (counter == 10) {
-            counter = 0;
-          }
-        },
-        child: const Icon(Icons.add),
-      ),
+      backgroundColor: const Color.fromARGB(255, 68, 68, 68),
     );
   }
 }
