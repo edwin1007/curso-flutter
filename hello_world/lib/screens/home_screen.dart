@@ -16,7 +16,14 @@ class HomeScreen extends StatelessWidget {
         ),
         backgroundColor: const Color.fromARGB(255, 56, 56, 55),
       ),
-      body: const FeedCard(),
+      body: ListView(
+        children: const [
+          FeedCard(),
+          FeedCard(),
+          FeedCard(),
+          FeedCard(),
+        ],
+      ),
       backgroundColor: const Color.fromARGB(255, 68, 68, 68),
     );
   }
