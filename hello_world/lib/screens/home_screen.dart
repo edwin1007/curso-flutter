@@ -25,6 +25,7 @@ class HomeScreen extends StatelessWidget {
         decoration: const BoxDecoration(color: Color.fromARGB(255, 56, 56, 55)),
         child: Container(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                 padding: const EdgeInsets.all(10),
@@ -47,9 +48,14 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
 
-              const Text(
-                'Este es un post, una publicacion, una actualizacion de estado, un nueva noticia, algo que se comparte al publico',
-                style: TextStyle(color: Colors.white),
+              const Padding(
+                padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
+                child: Text(
+                  'Este es un post, una publicacion, una actualizacion de estado, un nueva noticia, algo que se comparte al publico',
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
 
               Container(
@@ -80,6 +86,7 @@ class HomeScreen extends StatelessWidget {
                           'Comentar',
                           style: textStyle,
                         )),
+                    // tercer boton
                     TextButton(
                         onPressed: () {},
                         child: const Text(
