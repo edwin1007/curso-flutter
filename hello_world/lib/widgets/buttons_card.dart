@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'like_button.dart';
 
 class ButtonsCard extends StatelessWidget {
   const ButtonsCard({
@@ -8,17 +9,14 @@ class ButtonsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const textStyle = TextStyle(
-        color: Colors.blue, fontSize: 15, fontWeight: FontWeight.bold);
+        color: Color.fromARGB(255, 154, 155, 157),
+        fontSize: 15,
+        fontWeight: FontWeight.bold);
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         // primer boton
-        TextButton(
-            onPressed: () {},
-            child: const Text(
-              'Me gusta',
-              style: textStyle,
-            )),
+        LikeButton(textStyle: textStyle),
         // segundo boton
         TextButton(
             onPressed: () {},

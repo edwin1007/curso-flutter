@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/widgets/feed_card.dart';
+import 'package:hello_world/widgets/list_view_feed.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({
@@ -16,14 +16,7 @@ class HomeScreen extends StatelessWidget {
         ),
         backgroundColor: const Color.fromARGB(255, 56, 56, 55),
       ),
-      body: ListView(
-        children: const [
-          FeedCard(),
-          FeedCard(),
-          FeedCard(),
-          FeedCard(),
-        ],
-      ),
+      body: ListViewFeed(),
       backgroundColor: const Color.fromARGB(255, 68, 68, 68),
     );
   }

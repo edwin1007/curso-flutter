@@ -5,7 +5,9 @@ import 'title_card.dart'; // atajo: importM
 import 'image_card.dart';
 
 class FeedCard extends StatelessWidget {
-  const FeedCard({super.key});
+  const FeedCard({super.key, required this.card});
+
+  final Map<String, String> card;
 
   @override
   Widget build(BuildContext context) {
@@ -17,23 +19,30 @@ class FeedCard extends StatelessWidget {
       child: Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
               padding: const EdgeInsets.all(10),
-              child: const TitleCard(),
+              child: TitleCard(
+                name: card['name']!,
+              ),
             ),
 
-            const Padding(
+            Padding(
               padding:
                   EdgeInsets.only(left: 10, right: 10, bottom: 10, top: 10),
-              child: DescriptionCard(),
+              child: DescriptionCard(
+                description: card['description']!,
+              ),
             ),
 
             Container(
               padding: const EdgeInsets.only(top: 10),
               width: double.infinity,
               height: 200,
-              child: ImageCard(),
+              child: ImageCard(
+                image: card['image']!,
+              ),
             ),
             //en este container esta una fila de botones
             Container(
