@@ -16,7 +16,7 @@ class ButtonsCard extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         // primer boton
-        LikeButton(textStyle: textStyle),
+        LikeButton(),
         // segundo boton
         TextButton(
             onPressed: () {},
